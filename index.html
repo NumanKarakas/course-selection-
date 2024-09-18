@@ -1,0 +1,83 @@
+<! This website is coded by Rigved Barve and Numan Karakas --- completed on December 13th 2021
+   This page is the starting page, where the user is able to select what department they want more information about. Once the user has completed browsing through the courses they wish to 
+gather more information about, they can go to a schedule page, where they can enter the courses they plan to take, and see how much amount of workload is estimated for those classes. 
+>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="courseWeb.css" />
+
+      
+    
+  </head>
+  <body>
+    <p id="Title">
+      Course Selection Website
+    </p>
+    <p id="MathDepartment">
+      Click below for more information on all the Math Courses 
+    </p>
+
+    <button class="MathButton" onclick="nextPage()">
+      Learn more about the Math Department!
+    </button>
+
+    <p id="ScienceDepartment">
+      Click below for more information on all the Science Courses
+    </p>
+
+    <button class="ScienceButton" onclick="nextPage1()">
+      Learn more about the Science Department!
+    </button>
+
+    <p id="HistoryDepartment">
+      Click below for more information on all the History Courses
+    </p>
+
+    <button class="HistoryButton" onclick="nextPage2()">
+      Learn more about the History Department!
+    </button>
+
+    <p id="LitDepartment">
+      Click below for more information on all the Literature Courses
+    </p>
+<p>
+  
+   
+    <button class="LitButton" onclick="nextPage3()">
+      Learn more about the Literature Department!
+    </button>
+ </p>
+    <p>
+    <p id="ScheduleText">
+      Click below to make your own course schedule
+    </p>
+     <button class="ScheduleButton" onclick="nextPage4()">
+       Make your own schedule
+    </button>
+    </p>
+   
+           
+           <script>
+      function nextPage() {
+        location.replace("Math.html");
+      }
+      function nextPage1() {
+        location.replace("Science.html");
+      }
+      function nextPage2() {
+        location.replace("History.html");
+      }
+      function nextPage3() {
+        location.replace("Lit.html");
+      }
+      function nextPage4(){
+        location.replace("schedule1.html")
+      }
+       
+    </script>
+  </body>
+  </div>
+</html>

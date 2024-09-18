@@ -1,0 +1,259 @@
+  <!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+  </head>
+  <body>
+    <script type="text/javascript">
+
+         function firstAndLast(a, b)
+      {
+        var newString = "";
+        newString += a[0] + b[b.length - 1]
+      }
+
+
+
+      function putTogether(a, b)
+      {
+        if(a.length < b.length)
+        {
+          return a.substring(a.length() - b.length(), a.length())
+        }
+
+        if a.length == b.length
+        {
+          return a + b
+        }
+
+        if(b.length < a.length)
+          {
+            return b.substring(b.length() - a.length(), b.length())
+          }
+
+      }
+
+      function reverseArray(arr) {
+        var revArr = [""];
+        for (var i = arr.length - 1; i >= 0; i--) {
+          revArr += arr[i] + ",";
+        }
+        return revArr;
+      }
+
+
+
+      function middleThree(arr)
+      {
+        var newArr = []
+        var middle = arr.length / 2
+        var mid = math.floor(middle)
+        return [arr[mid - 1] , arr[mid] , arr[mid + 1]]
+      }
+
+
+
+
+      function ordered(a, b, c) {
+        if (b >= a && c >= b)
+        {
+          return true;
+        }
+        return false;
+      }
+
+
+
+      function tenDifference(a, b, c) {
+        if (b == a + 10 || c == b + 10 || c == a + 10) {
+          return true;
+        }
+        return false;
+      }
+
+
+
+
+
+
+
+
+      document.write(
+        'firstAndLast("last", "chars")  returns: ' +
+          firstAndLast("last", "chars") +
+          "<BR>"
+      );
+      document.write(
+        'firstAndLast("yo", "hey")  returns: ' +
+          firstAndLast("yo", "hey") +
+          "<BR>"
+      );
+      document.write(
+        'firstAndLast("good", "work")  returns: ' +
+          firstAndLast("good", "work") +
+          "<BR>"
+      );
+      document.write(
+        'firstAndLast("excellent", "javascript")  returns: ' +
+          firstAndLast("excellent", "javascript") +
+          "<BR>"
+      );
+      document.write(
+        'firstAndLast("hi", "")  returns: ' + firstAndLast("hi", "") + "<BR>"
+      );
+      document.write(
+        'firstAndLast("", "bye")  returns: ' +
+          firstAndLast("", "bye") +
+          "<BR><BR>"
+      );
+
+      document.write(
+        'putTogether("Hello", "Hi")  returns: ' +
+          putTogether("Hello", "Hi") +
+          "<BR>"
+      );
+      document.write(
+        'putTogether("Hello", "JavaScript")  returns: ' +
+          putTogether("Hello", "JavaScript") +
+          "<BR>"
+      );
+      document.write(
+        'putTogether("JavaScript", "Hello")  returns: ' +
+          putTogether("JavaScript", "Hello") +
+          "<BR>"
+      );
+      document.write(
+        'putTogether("Hello", "")  returns: ' +
+          putTogether("Hello", "") +
+          "<BR>"
+      );
+      document.write(
+        'putTogether("", "Hi")  returns: ' + putTogether("", "Hi") + "<BR>"
+      );
+      document.write(
+        'putTogether("Excellent", "TopShelf")  returns: ' +
+          putTogether("Excellent", "TopShelf") +
+          "<BR><BR>"
+      );
+
+      document.write(
+        "reverseArray[1, 2, 3, 4])  returns: [" +
+          reverseArray([1, 2, 3, 4]) +
+          "]<BR>"
+      );
+      document.write(
+        "reverseArray[9, 21, 43, 14])  returns: [" +
+          reverseArray([9, 21, 43, 14]) +
+          "]<BR>"
+      );
+      document.write(
+        'reverseArray["Fred", "Harry", "Sally"])  returns: [' +
+          reverseArray(["Fred", "Harry", "Sally"]) +
+          "]<BR>"
+      );
+      document.write(
+        "reverseArray[])  returns: [" + reverseArray([]) + "]<BR>"
+      );
+      document.write(
+        "reverseArray[91, 31, 53, 24, 45, 18])  returns: [" +
+          reverseArray([91, 31, 53, 24, 45, 18]) +
+          "]<BR><BR>"
+      );
+
+      document.write(
+        "middleThree[1, 2, 3, 4, 5, 6, 7])  returns: [" +
+          middleThree([1, 2, 3, 4, 5, 6, 7]) +
+          "]<BR>"
+      );
+      document.write(
+        "middleThree[17, 15, 13, 11, 9, 7, 5, 3, 1])  returns: [" +
+          middleThree([17, 15, 13, 11, 9, 7, 5, 3, 1]) +
+          "]<BR>"
+      );
+      document.write(
+        "middleThree[17, 15, 13, 11, 9, 7, 5, 3, 1, 21, 31, 45, 26, 27, 22, 34, 76])  returns: [" +
+          middleThree([
+            17, 15, 13, 11, 9, 7, 5, 3, 1, 21, 31, 45, 26, 27, 22, 34, 76,
+          ]) +
+          "]<BR>"
+      );
+      document.write(
+        'middleThree["Fred", "Harry", "Sally"])  returns: [' +
+          middleThree(["Fred", "Harry", "Sally"]) +
+          "]<BR>"
+      );
+      document.write(
+        'middleThree["Fred", "Harry", "Sally", "Sam", "Bill"])  returns: [' +
+          middleThree(["Fred", "Harry", "Sally", "Sam", "Bill"]) +
+          "]<BR><BR>"
+      );
+
+      document.write(
+        "ordered(5, 5, 7, false)  returns: " + ordered(5, 5, 7, false) + "<BR>"
+      );
+      document.write(
+        "ordered(5, 5, 7, true)  returns: " + ordered(5, 5, 7, true) + "<BR>"
+      );
+      document.write(
+        "ordered(6, 5, 7, false)  returns: " + ordered(6, 5, 7, false) + "<BR>"
+      );
+      document.write(
+        "ordered(6, 5, 7, true)  returns: " + ordered(6, 5, 7, true) + "<BR>"
+      );
+      document.write(
+        "ordered(1, 5, 7, false)  returns: " + ordered(1, 5, 7, false) + "<BR>"
+      );
+      document.write(
+        "ordered(1, 5, 7, true)  returns: " + ordered(1, 5, 7, true) + "<BR>"
+      );
+      document.write(
+        "ordered(3, 3, 3, false)  returns: " + ordered(3, 3, 3, false) + "<BR>"
+      );
+      document.write(
+        "ordered(3, 3, 3, true)  returns: " + ordered(3, 3, 3, true) + "<BR>"
+      );
+      document.write(
+        "ordered(7, 8, 8, false)  returns: " + ordered(7, 8, 8, false) + "<BR>"
+      );
+      document.write(
+        "ordered(7, 8, 8, true)  returns: " +
+          ordered(7, 8, 8, true) +
+          "<BR><BR>"
+      );
+
+      document.write(
+        "tenDifference(7, 8, 16)  returns: " + tenDifference(7, 8, 16) + "<BR>"
+      );
+      document.write(
+        "tenDifference(7, 8, 17)  returns: " + tenDifference(7, 8, 17) + "<BR>"
+      );
+      document.write(
+        "tenDifference(9, 8, 18)  returns: " + tenDifference(9, 8, 18) + "<BR>"
+      );
+      document.write(
+        "tenDifference(26, 18, 16)  returns: " +
+          tenDifference(26, 18, 16) +
+          "<BR>"
+      );
+      document.write(
+        "tenDifference(27, 15, 20)  returns: " +
+          tenDifference(27, 15, 20) +
+          "<BR>"
+      );
+      document.write(
+        "tenDifference(10, 8, 6)  returns: " + tenDifference(10, 8, 6) + "<BR>"
+      );
+      document.write(
+        "tenDifference(16, 18, 7)  returns: " +
+          tenDifference(16, 18, 7) +
+          "<BR>"
+      );
+      document.write(
+        "tenDifference(27, 32, 36)  returns: " +
+          tenDifference(27, 32, 36) +
+          "<BR><BR>"
+      );
+    </script>
+  </body>
+</html>

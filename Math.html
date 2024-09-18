@@ -1,0 +1,136 @@
+<! There are 4 main html deparment documents, one each for Math, Science, History and Literature. These main html files have the names of the courses, and buttons to click, which allows the user 
+to see the specific details about each of the courses. 
+>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <div class="flexbox-containerMath">
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="courseWeb.css" />
+  </head>
+  <body>
+    <table width = "1300" border = 5px padding = 20px >
+    
+  <tr>
+    <td width = "25%" style=text-align:center;>
+    <p id="page2">Algebra 1</p>
+    <button class="button" onclick="nextPage()">
+      Learn more about this course!
+    </button>
+    </td>
+
+      <td width = "25%" style=text-align:center;>
+    <p id="page2">Geometry</p>
+    <button class="button" onclick="nextPage2()">
+      Learn more about this course!
+    </button>
+    </td>
+
+    <td width = "25%" style=text-align:center;>
+    <p id="page2">Algebra 2</p>
+    <button class="button" onclick="nextPage1()">
+      Learn more about this course!
+    </button>
+    </td>
+
+    <td width = "25%" style=text-align:center;>
+    <p id="page2">Algebra 2/Trig.</p>
+    <button class="button" onclick="nextPage3()">
+      Learn more about this course!
+    </button>
+    </td>
+  </tr>
+      
+  <tr>   
+    <td width = "25%" style=text-align:center;>
+    <p id="page2">Pre-Calculus</p>
+    <button class="button" onclick="nextPage4()">
+      Learn more about this course!
+    </button>
+    </td>
+
+    <td width = "25%" style=text-align:center;>
+    <p id="page2">Pre-Calculus Honors</p>
+    <button class="button" onclick="nextPage5()">
+      Learn more about this course!
+    </button>
+      </td>
+
+    <td width = "25%" style=text-align:center;>
+    <p id="page2">Appl. of Adv. Math</p>
+    <button class="button" onclick="nextPage6()">
+      Learn more about this course!
+    </button>
+      </td>
+
+    <td width = "25%" style=text-align:center;>
+    <p id="page2">AP Calculus AB</p>
+    <button class="button" onclick="nextPage7()">
+      Learn more about this course!
+    </button>
+    </td>
+  </tr>
+      
+  <tr>
+    <td width = "25%" style=text-align:center;>
+    <p id="page2">AP Calculus BC</p>
+    <button class="button" onclick="nextPage8()">
+      Learn more about this course!
+    </button>
+      </td>
+
+    <td width = "25%" style=text-align:center;>
+    <p id="page2">AP Stats</p>
+    <button class="button" onclick="nextPage9()">
+      Learn more about this course!
+    </button>
+    </td>
+  
+    <td colspan = 2 style=text-align:center;>
+    <p id="backbutton"></p>
+    <button class="buttonmath" onclick="NextPage10()">
+      Click to go back to the department selection page
+    </button>
+    </td>
+    
+  </tr>
+
+    <script>
+      function nextPage() {
+        location.replace("algebra1.html");
+      }
+      function nextPage1() {
+        location.replace("algebra2.html");
+      }
+      function nextPage2() {
+        location.replace("geometry.html");
+      }
+      function nextPage3() {
+        location.replace("algebra2trig.html");
+      }
+      function nextPage4() {
+        location.replace("precalculus.html");
+      }
+      function nextPage5() {
+        location.replace("precalculushonors.html");
+      }
+      function nextPage6() {
+        location.replace("AAPM.html");
+      }
+      function nextPage7() {
+        location.replace("APCalcAB.html");
+      }
+      function nextPage8() {
+        location.replace("APCalcBC.html");
+      }
+      function nextPage9() {
+        location.replace("APStats.html");
+      }
+      function NextPage10() {
+        location.replace("index.html");
+      }
+    </script>
+  </body>
+  </div>
+</html>
