@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <div class="flexbox-containerSchedule">
+    <head>
+      <meta charset="utf-8" />
+      <script src="coursesList.js" defer></script>
+      <link rel="stylesheet" type="text/css" href="schedule.css" />
+    </head>
+
+    
+    <body>
+      <p class="HeaderTag">
+        <b>Course Schedule </b>
+      </p>
+      <table class="table"width="" border="1px" padding="20px">
+        <tr>
+          <td width="100%">
+            <p class= "mathcourse">
+                Choose your Math course from the list below:
+            </p> 
+            <select name="mathcourse" id="mathcourse">
+              <option diasabled hidden selected> </option>
+              <option value="0">Algebra 1</option>
+              <option value="1">Algebra 2</option>
+              <option value="2">Geometry</option>
+              <option value="3">Precalculus</option>
+              <option value="4">Precalculus Honors</option>
+              <option value="5">Algebra 2/Trig</option>
+              <option value="6">AP Calculus AB</option>
+              <option value="7">AP Calculus BC</option>
+               <option value="8">Applications Of Advanced Math</option>
+               <option value="9">AP Stats</option>
+            </select>
+          </td>
+        </tr>
+        
+<! The block of code above displays all the possible course options that are available for the Math department. Similarly there are 3 more blocks of code like this for the other 3 departments. 
+    The user is able to select their course using a dropdown menu. 
+>
+        <tr>
+          <td width="100%">
+            <p class="sciencecourse">
+              Choose your Science course from the list below:
+            </p>
+
+            <select name="sciencecourse" id="sciencecourse">
+              <option disabled hidden selected> </option>
+              <option value="0">Biology</option>
+              <option value="1">Chemistry</option>
+              <option value="2">Chemistry Honors</option>
+              <option value="3">AP Physics 1</option>
+              <option value="4">AP Environmental Science</option>
+              <option value="5">AP Biology</option>
+              <option value="6">AP Physics C</option>
+              <option value="7">Physiology</option>
+               <option value="8">AP Chemistry </option>
+            </select>
+          </td>
+        </tr>
+
+        <tr>
+          <td width="100%">
+            <p class="historycourse">
+              Choose your History course from the list below:
+            </p>
+            <select name="historycourse" id="historycourse">
+              <option disabled hidden selected> </option>
+              <option value="0">World History </option>
+              <option value="1">World Studies </option>
+              <option value="2">US History </option>
+              <option value="3">AP US History </option>
+              <option value="4">American Studies </option>
+              <option value="5">US Government and Politics </option>
+              <option value="6">AP US Govenment and Politics</option>
+              <option value="7">Economics </option>
+              <option value="8 ">AP Macroeconomics </option>
+        
+              
+            </select>
+          </td>
+        </tr>
+        
+        <tr>
+          <td width="100%">
+            <p class="litcourse">
+              Choose your Literature course from the list below:
+            </p>
+
+            <select name="litcourse" id="litcourse">
+              <option disabled hidden selected> </option>
+              <option value="0"> Lit/Writ 9</option>
+              <option value="1"> World Literature</option>
+              <option value="2"> American Literature</option>
+              <option value="3"> American Litrature Honors</option>
+              <option value="4"> British Literature</option>
+              <option value="5"> Contemporary Literature</option>
+              <option value="6"> Myth/Folklore Literature</option>
+              <option value="7"> AP Literature</option>
+            </select>
+          </td>
+        </tr>
+      </table>
+
+      <p id="second"></p>
+      <p id="results"></p>
+
+      <button class="button" onclick="Calc()">
+        Do your calculation
+      </button>
+
+      
+      <button class="backbutton" onclick="NextPage()">
+        Click to go back to the departments page
+      </button>
+
+  
+      
+      <script class = "Hours">
+        function NextPage() {
+          location.replace("index.html");
+        }
+        function Calc() {
+          var m = document.getElementById("mathcourse");
+          var s = document.getElementById("sciencecourse");
+          var h = document.getElementById("historycourse");
+          var l = document.getElementById("litcourse");
+
+          var mvalue = m.options[m.selectedIndex].value;
+          var svalue = s.options[s.selectedIndex].value;
+          var hvalue = h.options[h.selectedIndex].value;
+          var lvalue = l.options[l.selectedIndex].value;
+
+          var res =
+            mathClassesHours[mvalue] +
+            scienceClassesHours[svalue] +
+            historyClassesHours[hvalue] +
+            litClassesHours[lvalue];
+
+          document.getElementById("second").innerHTML =
+            "<b>You have selected: <br> Math: </b>" +
+            mathClasses[mvalue] +"- " + mathClassesHours[mvalue] +" "+"Hour(s)"+
+            "<br> <b>Science: </b>" + scienceClasses[svalue] + "- "+
+            scienceClassesHours[svalue] +" "+ "Hour(s)" + 
+            "<br> <b>History: </b>" +
+            historyClasses[hvalue] +"- "+ historyClassesHours[hvalue] + " "+"Hour(s)"+
+            "<br><b> Literature:</b> " +
+            litClasses[lvalue] +"- "+ litClassesHours[lvalue] + " " + "Hour(s)"
+            ".";
+          document.getElementById("results").innerHTML =
+            "<hr><b><h1>Total Estimated Workload:</h1> " + res + " Hours per week"
+        }
+      </script>
+  
+    </body>
+  </div>
+</html>
+<! This last block of code, inside the script tags, is what gets the input from the user and displays it, confirming with the user the values they had selected. 
+It also gets the hour value from each course selection and adds it together in the estimated amount of workload, to display the total value. 
+>
